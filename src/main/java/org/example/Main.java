@@ -37,7 +37,7 @@ public class Main {
             try {
                 name = String.valueOf("N_" + myWriter.getId());
                 name = name.concat("_" + myWriter.getFirstName());
-                name = name.replaceAll("[^\\w]+", " ");                                // "[^\w]+" - удаляем все специальные символы
+                name = name.replaceAll("[/:\\*?\"<>|+]", " ");              // "[/:\\*?\"<>|+]" - заменяем эти символы в title на "пробел" - убираем недопустимые символы в именах файлов для ОС Windows и UNIX
 
                 System.out.println("\nNative name.length: " + name.length());
                 System.out.println(name);
